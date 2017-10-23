@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29072" started-at="2017-10-22T18:26:50Z" finished-at="2017-10-22T18:27:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29072" started-at="2017-10-22T18:26:50Z" finished-at="2017-10-22T18:27:19Z">
+      <class name="scripts.VerifyBlogComments">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="startBrowser" is-config="true" duration-ms="9346" started-at="2017-10-22T23:56:50Z" finished-at="2017-10-22T23:56:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="verifyBlogCommentWithFirstName()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="verifyBlogCommentWithFirstName" duration-ms="18025" started-at="2017-10-22T23:56:59Z" finished-at="2017-10-22T23:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBlogCommentWithFirstName -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="closeBrowser" is-config="true" duration-ms="1662" started-at="2017-10-22T23:57:17Z" finished-at="2017-10-22T23:57:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- scripts.VerifyBlogComments -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
