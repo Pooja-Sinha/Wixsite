@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29072" started-at="2017-10-22T18:26:50Z" finished-at="2017-10-22T18:27:19Z">
+  <suite name="Default suite" duration-ms="72541" started-at="2017-10-23T17:14:29Z" finished-at="2017-10-23T17:15:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29072" started-at="2017-10-22T18:26:50Z" finished-at="2017-10-22T18:27:19Z">
+    <test name="Default test" duration-ms="72541" started-at="2017-10-23T17:14:29Z" finished-at="2017-10-23T17:15:42Z">
       <class name="scripts.VerifyBlogComments">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="startBrowser" is-config="true" duration-ms="9346" started-at="2017-10-22T23:56:50Z" finished-at="2017-10-22T23:56:59Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="startBrowser" is-config="true" duration-ms="15806" started-at="2017-10-23T22:44:29Z" finished-at="2017-10-23T22:44:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="verifyBlogCommentWithFirstName()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="verifyBlogCommentWithFirstName" duration-ms="18025" started-at="2017-10-22T23:56:59Z" finished-at="2017-10-22T23:57:17Z">
+        <test-method status="PASS" signature="verifyBlogCommentWithFirstName()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="verifyBlogCommentWithFirstName" duration-ms="47046" started-at="2017-10-23T22:44:45Z" finished-at="2017-10-23T22:45:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBlogCommentWithFirstName -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="closeBrowser" is-config="true" duration-ms="1662" started-at="2017-10-22T23:57:17Z" finished-at="2017-10-22T23:57:19Z">
+        <test-method status="PASS" signature="verifyBlogCommentWithLastName()[pri:1, instance:scripts.VerifyBlogComments@dc24521]" name="verifyBlogCommentWithLastName" duration-ms="7695" started-at="2017-10-23T22:45:32Z" finished-at="2017-10-23T22:45:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBlogCommentWithLastName -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:scripts.VerifyBlogComments@dc24521]" name="closeBrowser" is-config="true" duration-ms="1961" started-at="2017-10-23T22:45:40Z" finished-at="2017-10-23T22:45:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

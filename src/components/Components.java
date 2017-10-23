@@ -8,6 +8,9 @@ import org.testng.Assert;
 import pages.BlogPage;
 import pages.LandingPage;
 
+/****** 
+ * Components class provides the linkage between different pages in the POM model
+ * ******/
 public class Components{
 	
 	private static final Logger LOGGER = Logger.getLogger(Components.class.getName());
@@ -46,12 +49,22 @@ public class Components{
 		public void commentOnBlogWithFirstName_Comp() throws Exception{
 			try{
 				landingPageObj.click24HoursH2();
-				blogPageObj.commentWithFirstName();
-				
+				blogPageObj.commentWithFirstName();	
 			}catch(Exception e){
 				LOGGER.log(Level.SEVERE, e.getMessage());
 				throw e;
 			}
 		}
+		
+		public void commentOnBlogWithLastName_Comp() throws Exception{
+			try{
+				//landingPageObj.click24HoursH2();
+				blogPageObj.commentWithLastName();	
+			}catch(Exception e){
+				LOGGER.log(Level.SEVERE, e.getMessage());
+				throw e;
+			}
+		}
+		
 
 }

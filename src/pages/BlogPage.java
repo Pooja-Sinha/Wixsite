@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import utilities.Utilities;
@@ -23,6 +24,13 @@ public class BlogPage extends Utilities{
 		return driver.findElement(By.xpath(common.getProperty("CommentTextbox_BeforeFBLogin_xpath")));
 	}
 	
+	/*** Gets comment box locator after logging in to facebook
+	 * **/
+	public WebElement getCommentBox_afterFBLogin(){
+		return driver.findElement(By.xpath(common.getProperty("commentBoxAfterFBLogin_xpath")));
+	}
+	
+	
 	/*** Gets Log In button to facebook
 	 * **/
 	public void getLogInButton(){
@@ -34,15 +42,7 @@ public class BlogPage extends Utilities{
 	public WebElement getPostButton(){
 		return driver.findElement(By.xpath(common.getProperty("PostButton_xpath")));
 	}
-	
-	public WebElement getSortByDropDown(){
-		return driver.findElement(By.id(common.getProperty("SortByDropdown_ID")));
-	}
-	
-	public WebElement getNewestOption(){
-		return driver.findElement(By.xpath(common.getProperty("NewestOption_xpath")));
-	}
-	
+
 	/*** Function to post comment to blog '24 hours in Washington D.C.' with first name
 	 * **/
 	public void commentWithFirstName(){
@@ -63,9 +63,11 @@ public class BlogPage extends Utilities{
 		String comment = "[Pooja]-Testing blog comment for 24 Hours in Washington D.C.";
 		getCommentBox_beforeFBLogin().sendKeys(comment);
 		getLogInButton();
+		
 		//get Window handles to switch to FB login new window
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1)); // This corresponds to new FB logn window
+		
 		//perform acctions on new window
 		driver.findElement(By.id(common.getProperty("Email_ID"))).sendKeys(common.getProperty("emailID_value"));
 		driver.findElement(By.id(common.getProperty("Password_ID"))).sendKeys(common.getProperty("password_value"));
@@ -82,6 +84,25 @@ public class BlogPage extends Utilities{
 		driver.findElement(By.xpath(commentXpath)).isDisplayed();
 	}
 	
-	
+	/*** Function to post comment to blog '24 hours in Washington D.C.' with last name
+	 * @throws InterruptedException 
+	 * **/
+	public void commentWithLastName() throws InterruptedException{
+		String comment = "[Kumari]-Testing blog comment for 24 Hours in Washington D.C.";
+		Actions actions = new Actions(driver);
+		actions.moveToElement(getCommentBox_afterFBLogin());
+		Thread.sleep(6000); // added alongwith Actions to avoid auto focus error for comment box
+		actions.click();
+		actions.sendKeys(comment);
+		actions.build().perform();
+		wait.until(ExpectedConditions.elementToBeClickable(getPostButton()));
+		getPostButton().click();
+		
+		/****   View if comment is posted with correct parameters   ****/
+		String userNameXpath = "//a[normalize-space()='Pooja Kumari']";
+		String commentXpath = "//span/span/span[normalize-space()='"+comment+"']";
+		driver.findElement(By.xpath(userNameXpath)).isDisplayed();
+		driver.findElement(By.xpath(commentXpath)).isDisplayed();
+	}
 
 }

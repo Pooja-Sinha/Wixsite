@@ -32,6 +32,17 @@ public class VerifyBlogComments {
 		}
 	}
 	
+	@Test(priority=1)
+	public void verifyBlogCommentWithLastName(){
+		try {
+			compObj.commentOnBlogWithLastName_Comp();
+		} catch (Exception e) {
+			LOGGER.log(Level.SEVERE, e.getMessage());
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
 	@AfterClass
 	public void closeBrowser(){
 		Utilities.closeBrowser();

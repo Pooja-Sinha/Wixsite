@@ -5,7 +5,7 @@
     <classes>
       <class name="scripts.VerifyBlogComments">
         <methods>
-          <include name="verifyBlogCommentWithFirstName"/>
+          <include name="verifyBlogCommentWithLastName"/>
           <include name="startBrowser"/>
           <include name="closeBrowser"/>
         </methods>
