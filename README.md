@@ -7,3 +7,5 @@
 
 4>The tests correspond to classes in src/scripts package.Modifications can be done as needed from here.
 Wish to run the scripts individually, these classes in script package can be run individually -- Run As> TestNG Test
+
+5> Also, before running install all the dependencies by running pom.xml as Maven Install -- Run As> Maven Install.
